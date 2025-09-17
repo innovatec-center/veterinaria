@@ -36,8 +36,8 @@ class Mascota(models.Model):
     nombre = models.CharField(max_length=100)
     especie = models.CharField(max_length=50)
     raza = models.CharField(max_length=50, blank=True)
-    edad = models.DecimalField(max_digits=2,decimal_places=2,null=True, blank=True)
-    peso = models.DecimalField(max_digits=2,decimal_places=2, null=True, blank=True)
+    edad = models.DecimalField(max_digits=4,decimal_places=2,null=True, blank=True)
+    peso = models.DecimalField(max_digits=4,decimal_places=2, null=True, blank=True)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
 
     #campos de auditoria o trazabilidad
